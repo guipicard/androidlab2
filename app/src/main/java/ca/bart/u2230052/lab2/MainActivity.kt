@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         const val TEXT_STATE = "TEXT_STATE"
         const val EDIT_STATE = "EDIT_STATE"
         const val PREFS_NAME = "PREFS_NAME"
+        var text_default = R.string.text_field
         var text_value = ""
         var edit_value = ""
     }
@@ -44,16 +45,18 @@ class MainActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener {
             model.buttonPressed = true
-            if (!binding.editText.text.toString().equals(""))
-                text_value = binding.editText.text.toString()
-                edit_value = ""
-                refresh()
+            text_value = binding.editText.text.toString()
+            edit_value = ""
+            refresh()
         }
     }
 
     fun refresh() {
+        if (model.buttonPressed)
             binding.textView.text = text_value
             binding.editText.setText(edit_value)
+            return
+        binding.textView.setText(text_default)
     }
 
     override fun onRestart() {
