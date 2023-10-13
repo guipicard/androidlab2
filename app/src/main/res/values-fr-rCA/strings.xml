@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">lab2</string>
+    <string name="edit_text_field">Nom</string>
+    <string name="text_field">Bonjour Monde!</string>
+    <string name="button_text">Renommé</string>
+</resources>

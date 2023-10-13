@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">lab2</string>
+    <string name="edit_text_field">Name</string>
+    <string name="text_field">Hello World!</string>
+    <string name="button_text">Rename</string>
+</resources>
